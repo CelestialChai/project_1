@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,29 @@
     <title>Fahrenheit to Celsius Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Fahrenheit to Celsius Converter</h1>
     </header>
     <main>
-        <section>
+        <section class="converter">
+            <label for="fahrenheit">Choose an option:</label>
+            <select id="dropdown" name="options">
+                <option value="fahrenheit">fahrenheit</option>
+                <option value="celsius">celsius</option>
+            </select>
+
             <div class="converter">
-                <label for="fahrenheit">Fahrenheit:</label>
-                <input type="text" id="fahrenheit" placeholder="Enter F">
+                <label for="fahrenheit">Input:</label>
+                <input type="text" id="fahrenheit" placeholder="Enter Temp">
                 <br>
-                <label for="celsius">Celsius:</label>
+                <label for="celsius">Answer:</label>
                 <input type="text" id="celsius" readonly>
                 <br>
-                <button onclick="convertTemperature()">Convert</button>
+                <div class="button">
+                    <button onclick="convertTemperature()">Convert</button>
+                </div>
             </div>
             <div class="result" id="result"></div>
         </section>
@@ -29,7 +39,8 @@
             <img src="https://via.placeholder.com/150" alt="Graphic placeholder">
         </aside>
         <article>
-            <p>This section contains additional information about temperature conversion, such as formulas, usage tips, or historical context. You can add any relevant information here.</p>
+            <p>This section contains additional information about temperature conversion, such as formulas, usage tips,
+                or historical context. You can add any relevant information here.</p>
         </article>
     </main>
     <footer>
@@ -47,4 +58,5 @@
         }
     </script>
 </body>
+
 </html>

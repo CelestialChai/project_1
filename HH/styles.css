@@ -51,22 +51,40 @@ section {
     transition: transform 0.3s ease;
 }
 
-section:hover {
+select:hover {
     transform: scale(1.05);
 }
 
 .converter {
-    text-align: center;
+    /* text-align: center; */
 }
 
-input[type="text"] {
-    width: 120px;
-    padding: 10px;
+/* // input[type="text"]  */
+
+select[id="dropdown"] {
+    width: 200px;
+    padding: 6px;
     margin: 10px 0;
     border: 2px solid #ff6347;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
+}
+
+input {
+    /* position: absolute */
+    width: 300px;
+    height: 15px;
+    padding: 6px;
+    margin: 10px;
+    border: 2px solid #ff6347;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.button {
+    text-align: center;
 }
 
 button {
