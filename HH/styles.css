@@ -44,7 +44,7 @@ main {
 
 section {
     grid-area: section;
-    height: 600px;
+    height: 500px;
     background: #fff;
     border: 2px solid #ff6347;
     border-radius: 12px;
@@ -58,15 +58,16 @@ select:hover {
 }
 
 .converter {
-    /* text-align: center; */
+    border-top: 10px;
 }
 
-/* // input[type="text"]  */
-
 select[id="dropdown"] {
-    width: 00px;
+    display: block;
+    justify-content: flex-start;
+    width: 200px;
     padding: 6px;
-    margin: 10px 0;
+    margin: 15px 0;
+    margin-left: 10px;
     border: 2px solid #ff6347;
     border-radius: 8px;
     text-align: left;
@@ -131,9 +132,11 @@ article {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 200%;
 }
 
 footer {
+    display: block;
     background: rgba(255, 255, 255, 0.2);
     text-align: center;
     padding: 10px;
@@ -160,9 +163,9 @@ div#wrapper {
     select[id="dropdown"] {
         display: block;
         justify-content: flex-start;
-        width: 30%;
+        width: 200px;
         padding: 6px;
-        margin: 10px 0;
+        margin: 15px 0;
         margin-left: 10px;
         border: 2px solid #ff6347;
         border-radius: 8px;
@@ -183,17 +186,21 @@ div#wrapper {
     }
 
     #answer {
-        width: 60%;  
-        height: 20px;  
+        width: 64%;  
+        height: 15px;  
     }
 
     #inputText {
-        width: 60%;
-        /* height: 20px;   */
+        width: 64%;
+        height: 15px;  
     }
   }
   
-  /* Large smartphones - navbar changes color */
+  label {
+    margin-left: 15px;
+  }
+
+  /* Large smartphones - navbar changes color */ */
   /* @media screen and (max-width: 992px) {
     body {
         margin: 0 10%;
@@ -228,4 +235,4 @@ div#wrapper {
     /* #inputText { */
         /* width: 60%; */
         /* height: 20px;   */
-    /* } */
+    /* }
