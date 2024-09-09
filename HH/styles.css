@@ -9,6 +9,7 @@ body {
     #fbc2eb, /* Soft pink */
     #a0c4ff, /* Light blue */
     #b9fbc0  /* Light green */
+    
 );
     margin: 0;
     display: flex;
@@ -43,10 +44,11 @@ main {
 
 section {
     grid-area: section;
+    height: 600px;
     background: #fff;
     border: 2px solid #ff6347;
     border-radius: 12px;
-    padding: 20px;
+    padding-top: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -62,7 +64,7 @@ select:hover {
 /* // input[type="text"]  */
 
 select[id="dropdown"] {
-    width: 200px;
+    width: 00px;
     padding: 6px;
     margin: 10px 0;
     border: 2px solid #ff6347;
@@ -72,7 +74,8 @@ select[id="dropdown"] {
 }
 
 input {
-    /* position: absolute */
+    display: block;
+    justify-content: flex-start;
     width: 300px;
     height: 15px;
     padding: 6px;
@@ -134,6 +137,95 @@ footer {
     background: rgba(255, 255, 255, 0.2);
     text-align: center;
     padding: 10px;
+    margin-top: 299px;
     font-size: 0.9rem;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+/* adding media screen miguelgallery */
+@media screen and (min-width: 768px) {
+div#wrapper {
+    display: block;
+    justify-content: flex-start;
+    unicode-bidi: isolate;
+    box-sizing: border-box;
+    margin: 2px auto;
+    padding: 0;
+    border: 2px solid #ffffff;
+    border-top: none;
+    border-bottom: none;
+    max-width: 1200px;
+    max-height: 100%;
+}
+
+    select[id="dropdown"] {
+        display: block;
+        justify-content: flex-start;
+        width: 30%;
+        padding: 6px;
+        margin: 10px 0;
+        margin-left: 10px;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+    input {
+        display: block;
+        justify-content: flex-start;
+        width: 40%;
+        height: 25px;
+        padding: 6px;
+        margin: 10px;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    #answer {
+        width: 60%;  
+        height: 20px;  
+    }
+
+    #inputText {
+        width: 60%;
+        /* height: 20px;   */
+    }
+  }
+  
+  /* Large smartphones - navbar changes color */
+  /* @media screen and (max-width: 992px) {
+    body {
+        margin: 0 10%;
+        border: 2px solid #ff6347;
+    }
+
+    select[id="dropdown"] {
+        width: 90%;
+        padding: 6px;
+        margin: 10px 0;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+    input {
+        width: 40%;
+        height: 25px;
+        padding: 6px;
+        margin: 10px;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* #answer {
+        width: 60%;  /* Adjust width here */
+        /* height: 20px;   */
+    /* } */
+
+    /* #inputText { */
+        /* width: 60%; */
+        /* height: 20px;   */
+    /* } */

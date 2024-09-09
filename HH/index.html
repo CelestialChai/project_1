@@ -13,45 +13,47 @@
     <header>
         <h1>Fahrenheit to Celsius Converter</h1>
     </header>
-    <main>
-        <section class="converter">
-            <label for="fahrenheit">Choose an option:</label>
-            <select id="dropdown" name="options">
-                <option value="fahrenheit">fahrenheit</option>
-                <option value="celsius">celsius</option>
-            </select>
+        <div id="wrapper"> <!--added a wrapper to look thinner--> 
+        <main>
+            <section class="converter">
+                <label for="fahrenheit">Choose an option:</label>
+                <select id="dropdown" name="options">
+                    <option value="fahrenheit">fahrenheit</option>
+                    <option value="celsius">celsius</option>
+                </select>
 
-            <div class="converter">
-                <label for="fahrenheit">Input:</label>
-                <input type="text" id="fahrenheit" placeholder="Enter Temp">
-                <br>
-                <label for="celsius">Answer:</label>
-                <input type="text" id="celsius" readonly>
-                <br>
-                <div class="button">
-                    <button onclick="convertTemperature()">Convert</button>
+                <div class="converter">
+                    <label for="inputText">Input:</label> <!-- changed for to inputText-->
+                    <input type="text" id="inputText" placeholder="Enter Temp"> <!-- changed id to inputText -->
+                    <br>
+                    <label for="answer">Answer:</label> <!-- changed for to answer-->
+                    <input type="text" id="answer" readonly><!-- changed id to answer-->
+                    <br>
+                    <div class="button">
+                        <button onclick="convertTemperature()">Convert</button>
+                    </div>
                 </div>
-            </div>
-            <div class="result" id="result"></div>
-        </section>
-        <aside>
-            <!-- Placeholder for graphic or additional content -->
-            <img src="https://via.placeholder.com/150" alt="Graphic placeholder">
-        </aside>
-        <article>
-            <p>This section contains additional information about temperature conversion, such as formulas, usage tips,
-                or historical context. You can add any relevant information here.</p>
-        </article>
-    </main>
-    <footer>
-        <p>© 2024 Temperature Converter. All rights reserved.</p>
-    </footer>
-
+                <div class="result" id="result"></div>
+            </section>
+            <aside>
+                <!-- Placeholder for graphic or additional content -->
+                <img src="https://via.placeholder.com/150" alt="Graphic placeholder">
+            </aside>
+            <article>
+                <p>This section contains additional information about temperature conversion, such as formulas, usage
+                    tips,
+                    or historical context. You can add any relevant information here.</p>
+            </article>
+        </main>
+        <footer>
+            <p>© 2024 Temperature Converter. All rights reserved.</p>
+        </footer>
+    </div>
     <script>
         function convertTemperature() {
-            let fahrenheit = document.getElementById('fahrenheit').value;
+            let fahrenheit = document.getElementById('inputText').value;
             let celsius = ((parseFloat(fahrenheit) - 32) * 5 / 9).toFixed(2);
-            document.getElementById('celsius').value = celsius;
+            document.getElementById('answer').value = celsius;
 
             // Display result below
             document.getElementById('result').textContent = `${fahrenheit} °F = ${celsius} °C`;
