@@ -2,10 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fahrenheit to Celsius Converter</title>
+    <link rel="stylesheet" href="project1\style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Fahrenheit to Celsius Converter</h1>
+    </header>
+    <main>
+        <section>
+            <div class="converter">
+                <label for="fahrenheit">Fahrenheit:</label>
+                <input type="text" id="fahrenheit" placeholder="Enter F">
+                <br>
+                <label for="celsius">Celsius:</label>
+                <input type="text" id="celsius" readonly>
+                <br>
+                <button onclick="convertTemperature()">Convert</button>
+            </div>
+            <div class="result" id="result"></div>
+        </section>
+        <aside>
+            <!-- Placeholder for graphic or additional content -->
+            <img src="https://via.placeholder.com/150" alt="Graphic placeholder">
+        </aside>
+        <article>
+            <p>This section contains additional information about temperature conversion, such as formulas, usage tips, or historical context. You can add any relevant information here.</p>
+        </article>
+    </main>
+    <footer>
+        <p>© 2024 Temperature Converter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function convertTemperature() {
+            let fahrenheit = document.getElementById('fahrenheit').value;
+            let celsius = ((parseFloat(fahrenheit) - 32) * 5 / 9).toFixed(2);
+            document.getElementById('celsius').value = celsius;
+// 
+            // Display result below
+            document.getElementById('result').textContent = `${fahrenheit} °F = ${celsius} °C`;
+        }
+    </script>
 </body>
 </html>
