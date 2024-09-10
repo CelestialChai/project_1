@@ -118,4 +118,32 @@ footer {
     padding: 10px;
     font-size: 0.9rem;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+/*thermometer css info -amanda*/
+
+#thermometerWrapper {
+    position: relative;
+    width: 289px;
+    height: 400px;
+}
+
+#thermometerClipart {
+    width: 100%;
+    height: auto;
+}
+
+#mercuryLevel {
+    position: absolute;
+    bottom: 60px; /* Position above the bulb */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 0; /* Start at 0 */
+    background-color: red;
+    border-radius: 20px;
+    transition: height 1s ease-out;
+=======
+
 }

@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fahrenheit to Celsius Converter</title>
-    <link rel="stylesheet" href="project1\style.css">
+
+    <link rel="stylesheet" href="..//project1/assets/css/style.css">
+    <!--Don't forget to link the stylesheet in the project_1 folder-->
+        <link rel="stylesheet" href="project1\style.css">
+
 </head>
 <body>
     <header>
@@ -25,6 +29,23 @@
             <div class="result" id="result"></div>
         </section>
         <aside>
+
+            <!-- Thermometer Section -->
+             <!--In the clipart section link one of the thermometers in the project_1 folder-->
+            <div id="thermometerWrapper">
+                <div id="mercuryLevel"></div>
+                <img id="thermometerClipart" src="../project1/assets/image/Themometer_Blue.png" alt="Thermometer Clipart">
+             
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2024 Temperature Converter. All rights reserved Group09.</p>
+    </footer>
+<!--Don't forget to update your src with the java file in the project_1 folder-->
+    <script src="../test/java.js">
+
+
             <!-- Placeholder for graphic or additional content -->
             <img src="https://via.placeholder.com/150" alt="Graphic placeholder">
         </aside>
@@ -45,6 +66,7 @@
             // Display result below
             document.getElementById('result').textContent = `${fahrenheit} °F = ${celsius} °C`;
         }
+
     </script>
 </body>
 </html>
