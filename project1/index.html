@@ -2,10 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fahrenheit to Celsius Converter</title>
+    <link rel="stylesheet" href="..//project1/assets/css/style.css">
+    <!--Don't forget to link the stylesheet in the project_1 folder-->
+    
 </head>
 <body>
-    
+    <header>
+        <h1>Fahrenheit to Celsius Converter</h1>
+    </header>
+    <main>
+        <section>
+            <div class="converter">
+                <label for="fahrenheit">Fahrenheit:</label>
+                <input type="text" id="fahrenheit" placeholder="Enter F">
+                <br>
+                <label for="celsius">Celsius:</label>
+                <input type="text" id="celsius" readonly>
+                <br>
+                <button onclick="convertTemperature()">Convert</button>
+            </div>
+            <div class="result" id="result"></div>
+        </section>
+        <aside>
+            <!-- Thermometer Section -->
+             <!--In the clipart section link one of the thermometers in the project_1 folder-->
+            <div id="thermometerWrapper">
+                <div id="mercuryLevel"></div>
+                <img id="thermometerClipart" src="../project1/assets/image/Themometer_Blue.png" alt="Thermometer Clipart">
+             
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2024 Temperature Converter. All rights reserved Group09.</p>
+    </footer>
+<!--Don't forget to update your src with the java file in the project_1 folder-->
+    <script src="../test/java.js">
+
+    </script>
 </body>
 </html>
