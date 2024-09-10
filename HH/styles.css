@@ -136,13 +136,15 @@ article {
 }
 
 footer {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: rgba(255, 255, 255, 0.2);
     text-align: center;
     padding: 10px;
     margin-top: 299px;
     font-size: 0.9rem;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 /* adding media screen miguelgallery */
 @media screen and (min-width: 768px) {
@@ -158,6 +160,10 @@ div#wrapper {
     border-bottom: none;
     max-width: 1200px;
     max-height: 100%;
+}
+
+footer {
+    padding-bottom: 10px;
 }
 
     select[id="dropdown"] {
