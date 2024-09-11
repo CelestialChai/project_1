@@ -2,6 +2,7 @@ const maxCelsius = 100; // Max Celsius for thermometer (adjust as needed)
 
 // Function to convert Fahrenheit to Celsius and update thermometer
 function convertTemperature() {
+
     let fahrenheit = document.getElementById('inputText').value;
     let celsius = ((parseFloat(fahrenheit) - 32) * 5 / 9).toFixed(2);
     document.getElementById('answer').value = celsius;
@@ -23,11 +24,14 @@ function updateThermometer(tempCelsius, tempFahrenheit) {
         // Scale the mercury height based on the Celsius temperature
         // mercuryHeight = (tempCelsius / maxCelsius) * thermometerHeight;
         mercuryHeight = tempFahrenheit - 5;
+
     } else {
         mercuryHeight = 0;
     }
 
+
     mercury.style.height = `${mercuryHeight}%`;
+
 }
 
 // Initialize thermometer mercury
