@@ -1,0 +1,264 @@
+/* styles.css */
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, 
+    #ff7e5f, /* Soft pink */
+    #feb47b, /* Light orange */
+    #ff9a9e, /* Light coral */
+    #fbc2eb, /* Soft pink */
+    #a0c4ff, /* Light blue */
+    #b9fbc0  /* Light green */
+    
+);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "section aside"
+        "article aside";
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    grid-area: section;
+    height: 500px;
+    background: #fff;
+    border: 2px solid #ff6347;
+    border-radius: 12px;
+    padding-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+select:hover {
+    transform: scale(1.05);
+}
+
+.converter {
+    border-top: 10px;
+}
+
+select[id="dropdown"] {
+    display: block;
+    justify-content: flex-start;
+    width: 200px;
+    padding: 6px;
+    margin: 15px 0;
+    margin-left: 10px;
+    border: 2px solid #ff6347;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+input {
+    display: block;
+    justify-content: flex-start;
+    width: 300px;
+    height: 15px;
+    padding: 6px;
+    margin: 10px;
+    border: 2px solid #ff6347;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+aside {
+    grid-area: aside;
+    text-align: center;
+    padding: 20px;
+}
+
+aside img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    grid-area: article;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 200%;
+}
+
+footer {
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 10px;
+    margin-top: 299px;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+/* adding media screen miguelgallery */
+@media screen and (min-width: 768px) {
+div#wrapper {
+    display: block;
+    justify-content: flex-start;
+    unicode-bidi: isolate;
+    box-sizing: border-box;
+    margin: 2px auto;
+    padding: 0;
+    border: 2px solid #ffffff;
+    border-top: none;
+    border-bottom: none;
+    max-width: 1200px;
+    max-height: 100%;
+}
+
+    select[id="dropdown"] {
+        display: block;
+        justify-content: flex-start;
+        width: 200px;
+        padding: 6px;
+        margin: 15px 0;
+        margin-left: 10px;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+    input {
+        display: block;
+        justify-content: flex-start;
+        width: 40%;
+        height: 25px;
+        padding: 6px;
+        margin: 10px;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    #answer {
+        width: 64%;  
+        height: 15px;  
+    }
+
+    #inputText {
+        width: 64%;
+        height: 15px;  
+    }
+  }
+  
+  label {
+    margin-left: 15px;
+  }
+
+  /*thermometer css info -amanda*/
+
+#thermometerWrapper {
+    position: relative;
+    width: 289px;
+    height: 400px;
+}
+
+#thermometerClipart {
+    width: 100%;
+    height: auto;
+}
+
+#mercuryLevel {
+    position: absolute;
+    bottom: 60px; /* Position above the bulb */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 0; /* Start at 0 */
+    background-color: red;
+    border-radius: 20px;
+    transition: height 1s ease-out;
+
+}
+
+  /* Large smartphones - navbar changes color */
+  /* @media screen and (max-width: 992px) {
+    body {
+        margin: 0 10%;
+        border: 2px solid #ff6347;
+    }
+
+    select[id="dropdown"] {
+        width: 90%;
+        padding: 6px;
+        margin: 10px 0;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+    input {
+        width: 40%;
+        height: 25px;
+        padding: 6px;
+        margin: 10px;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* #answer {
+        width: 60%;  /* Adjust width here */
+        /* height: 20px;   */
+    /* } */
+
+    /* #inputText { */
+        /* width: 60%; */
+        /* height: 20px;   */
+    /* }
