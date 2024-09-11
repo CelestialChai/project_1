@@ -1,72 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fahrenheit to Celsius Converter</title>
-
-    <link rel="stylesheet" href="..//project1/assets/css/style.css">
-    <!--Don't forget to link the stylesheet in the project_1 folder-->
-        <link rel="stylesheet" href="project1\style.css">
-
+    <link rel="stylesheet" href="../project1/assets/style.css">
 </head>
+
 <body>
     <header>
         <h1>Fahrenheit to Celsius Converter</h1>
     </header>
-    <main>
-        <section>
-            <div class="converter">
-                <label for="fahrenheit">Fahrenheit:</label>
-                <input type="text" id="fahrenheit" placeholder="Enter F">
-                <br>
-                <label for="celsius">Celsius:</label>
-                <input type="text" id="celsius" readonly>
-                <br>
-                <button onclick="convertTemperature()">Convert</button>
-            </div>
-            <div class="result" id="result"></div>
-        </section>
-        <aside>
+        <div id="wrapper"> <!--added a wrapper to look thinner--> 
+        <main>
+            <section class="converter">
+                <label for="fahrenheit">Choose an option:</label>
+                <select id="dropdown" name="options">
+                    <option value="fahrenheit">fahrenheit</option>
+                    <option value="celsius">celsius</option>
+                </select>
 
-            <!-- Thermometer Section -->
-             <!--In the clipart section link one of the thermometers in the project_1 folder-->
+                <div class="converter">
+                    <label for="inputText">Input:</label> <!-- changed for to inputText-->
+                    <input type="text" id="inputText" placeholder="Enter Temp"> <!-- changed id to inputText -->
+                    <br>
+                    <label for="answer">Answer:</label> <!-- changed for to answer-->
+                    <input type="text" id="answer" readonly><!-- changed id to answer-->
+                    <br>
+                    <div class="button">
+                        <button onclick="convertTemperature()">Convert</button>
+                    </div>
+                </div>
+                <div class="result" id="result"></div>
+            </section>
+            <aside>
+               <!-- Thermometer Section -->
             <div id="thermometerWrapper">
                 <div id="mercuryLevel"></div>
-                <img id="thermometerClipart" src="../project1/assets/image/Themometer_Blue.png" alt="Thermometer Clipart">
-             
-            </div>
-        </aside>
-    </main>
-    <footer>
-        <p>© 2024 Temperature Converter. All rights reserved Group09.</p>
-    </footer>
-<!--Don't forget to update your src with the java file in the project_1 folder-->
-    <script src="../test/java.js">
-
-
-            <!-- Placeholder for graphic or additional content -->
-            <img src="https://via.placeholder.com/150" alt="Graphic placeholder">
-        </aside>
-        <article>
-            <p>This section contains additional information about temperature conversion, such as formulas, usage tips, or historical context. You can add any relevant information here.</p>
-        </article>
-    </main>
-    <footer>
-        <p>© 2024 Temperature Converter. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function convertTemperature() {
-            let fahrenheit = document.getElementById('fahrenheit').value;
-            let celsius = ((parseFloat(fahrenheit) - 32) * 5 / 9).toFixed(2);
-            document.getElementById('celsius').value = celsius;
-// 
-            // Display result below
-            document.getElementById('result').textContent = `${fahrenheit} °F = ${celsius} °C`;
-        }
-
-    </script>
+                <img id="thermometerClipart" src="..//project1/assets/image/Themometer_Blue.png" alt="Thermometer Clipart">
+            </aside>
+            <article>
+                <p>This section contains additional information about temperature conversion, such as formulas, usage
+                    tips,
+                    or historical context. You can add any relevant information here.</p>
+            </article>
+        </main>
+        <footer>
+            <p>© 2024 Temperature Converter. All rights reserved Group09.</p>
+        </footer>
+    </div>
+    <script src="../project1/assets/script.js"> </script>
+  
 </body>
+
 </html>
