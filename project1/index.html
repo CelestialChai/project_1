@@ -5,37 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahrenheit to Celsius Converter</title>
+
+    <title>Temperature Converter</title>
+
     <link rel="stylesheet" href="../project1/assets/styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Fahrenheit to Celsius Converter</h1>
+        <h1>Temperature Converter</h1>
     </header>
-        <div id="wrapper"> <!--added a wrapper to look thinner--> 
+    <div id="wrapper">
         <main>
             <section class="converter">
-                <label for="fahrenheit">Choose an option:</label>
-                <select id="dropdown" name="options">
-                    <option value="fahrenheit">fahrenheit</option>
-                    <option value="celsius">celsius</option>
+                <label for="fromDropdown">Convert From:</label>
+                <select id="fromDropdown" name="fromOptions">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="kelvin">Kelvin</option>
                 </select>
 
-                <div class="converter">
-                    <label for="inputText">Input:</label> <!-- changed for to inputText-->
-                    <input type="text" id="inputText" placeholder="Enter Temp"> <!-- changed id to inputText -->
-                    <br>
-                    <label for="answer">Answer:</label> <!-- changed for to answer-->
-                    <input type="text" id="answer" readonly><!-- changed id to answer-->
-                    <br>
-                    <div class="button">
-                        <button onclick="convertTemperature()">Convert</button>
-                    </div>
+                <input type="text" id="inputText" placeholder="Enter Temp">
+
+                <label for="toDropdown">Convert To:</label>
+                <select id="toDropdown" name="toOptions">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+
+                <label for="answer">Answer:</label>
+                <input type="text" id="answer" readonly>
+
+                <div class="button">
+                    <button onclick="convertTemperature()">Convert</button>
+
                 </div>
                 <div class="result" id="result"></div>
             </section>
             <aside>
+
                <!-- Thermometer Section -->
             <div id="thermometerWrapper">
                 <div id="mercuryLevel"></div>
@@ -48,7 +57,7 @@
             </article>
         </main>
         <footer>
-            <p>© 2024 Temperature Converter. All rights reserved Group09.</p>
+         <p>© Group 9 ~~ 2024 Temperature Converter ~~ Coding BootCamp 2024</p>
         </footer>
     </div>
     <script src="../project1/assets/script.js"> </script>
