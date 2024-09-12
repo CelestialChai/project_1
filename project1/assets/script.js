@@ -34,7 +34,9 @@ function updateThermometer(tempCelsius, tempFahrenheit) {
 
     // Get the background color and apply it
     function getTemperatureMessage(tempFahrenheit) {
-        if (tempFahrenheit > 100) {
+        if (tempFahrenheit > 200) {
+            return "You're on fire!";
+        } else if (tempFahrenheit > 100) {
             return "Around these temperatures, it's best to stay inside.";
         } else if (tempFahrenheit > 80) {
             return "It's getting quite warm, stay hydrated.";
@@ -44,6 +46,10 @@ function updateThermometer(tempCelsius, tempFahrenheit) {
             return "A bit chilly, you might want a jacket.";
         } else if (tempFahrenheit > 20) {
             return "It's cold, stay bundled up!";
+        } else if (tempFahrenheit > 0) {
+            return "It's really cold!";
+        } else if (tempFahrenheit < 0) {
+            return "You're gonna turn into a snowman!";
         } else {
             return "Convert your temperature above!";
         }
