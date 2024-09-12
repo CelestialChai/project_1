@@ -6,14 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
-<link rel="stylesheet" href="../project1/assets/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../project1/assets/style.css">
 </head>
+
 <body>
     <header>
         <h1>Temperature Converter</h1>
     </header>
     <div id="wrapper">
         <main>
+
             <section class="converter">
                 <label for="fromDropdown">Convert From:</label>
                 <select id="fromDropdown" name="fromOptions">
@@ -42,23 +45,25 @@
             </section>
             <aside>
 
-               <!-- Thermometer Section -->
-            <div id="thermometerWrapper">
-                <div id="mercuryLevel"></div>
-                <img id="thermometerClipart" src="..//project1/assets/image/Themometer_Blue.png" alt="Thermometer Clipart">
+                <!-- Thermometer Section -->
+                <div id="thermometerWrapper">
+                    <div id="mercuryLevel"></div>
+                    <img id="thermometerClipart" src="..//project1/assets/image/Themometer_Blue.png"
+                        alt="Thermometer Clipart">
             </aside>
             <article>
-                <p>This section contains additional information about temperature conversion, such as formulas, usage
+                <p id="changeText">This section contains additional information about temperature conversion, such as
+                    formulas, usage
                     tips,
                     or historical context. You can add any relevant information here.</p>
             </article>
         </main>
         <footer>
-         <p>© Group 9 ~~ 2024 Temperature Converter ~~ Coding BootCamp 2024</p>
+            <p>© Group 9 ~~ 2024 Temperature Converter ~~ Coding BootCamp 2024</p>
         </footer>
     </div>
     <script src="../project1/assets/script.js"> </script>
-  
+
 </body>
 
 </html>

@@ -125,7 +125,7 @@ aside {
 }
 
 aside img {
-    max-width: 100%;
+    1 max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -155,7 +155,7 @@ footer {
 
 #thermometerWrapper {
     position: relative;
-    top: 285px;
+    top: 260px;
     right: 130px;
     width: 70px;
     /* height: 300px; */
@@ -182,6 +182,14 @@ footer {
 
 }
 
+#answer {
+    height: 25px;
+}
+
+#inputText {
+    height: 25px;
+}
+
 /* adding media screen miguelgallery */
 @media screen and (min-width: 768px) {
 
@@ -193,6 +201,7 @@ footer {
         bottom: 13px;
         width: 90px;
     }
+
     #thermometerWrapper {
         display: static;
         top: auto;
@@ -200,6 +209,7 @@ footer {
         width: 275px;
         /* height: 300px; */
     }
+
     aside {
         grid-area: aside;
         text-align: center;
@@ -252,12 +262,12 @@ footer {
 
     #answer {
         width: 78%;
-        height: 15px;
+        height: 25px;
     }
 
     #inputText {
         width: 78%;
-        height: 15px;
+        height: 25px;
     }
 }
 
@@ -266,14 +276,14 @@ label {
 }
 
 
-
 @media screen and (max-width: 390px) {
     #thermometerWrapper {
         position: relative;
-        top: 275px;
+        top: 260px;
         right: 130px;
         height: 300px;
     }
+
     select[id="dropdown"] {
         display: block;
         justify-content: flex-start;
@@ -313,14 +323,14 @@ label {
 
     #answer {
         width: 283px;
-        height: 15px;
+        height: 20px;
         margin-top: 1px;
         margin-bottom: 5px;
     }
 
     #inputText {
         width: 283px;
-        height: 15px;
+        height: 20px;
         margin-top: 1px;
     }
 
