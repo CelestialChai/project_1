@@ -1,0 +1,3 @@
+https://htmlpreview.github.io/?
+
+This link lets you copy the url path and view the HTML file from github!
