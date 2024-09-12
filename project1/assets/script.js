@@ -73,7 +73,7 @@ function updateThermometer(value, unit) {
 
     if (celsiusValue >= 0) {
         // Scale the mercury height based on the Celsius temperature
-        mercuryHeight = (celsiusValue / maxCelsius) * 100; // Scale to percentage
+        mercuryHeight = (celsiusValue / maxCelsius) * 250; // Scale to percentage
         mercuryHeight = Math.min(100, mercuryHeight); // Cap at 100% to avoid overflow
     } else {
         mercuryHeight = 0;
