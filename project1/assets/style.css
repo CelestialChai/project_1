@@ -276,6 +276,9 @@ label {
 }
 
 
+/* NOTE : ANYTHING UNDER 391px THE MERCURY MOVES OUT OF THE THERMOMETER ?  - HH*/
+
+
 @media screen and (max-width: 390px) {
     #thermometerWrapper {
         position: relative;
