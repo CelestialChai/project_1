@@ -20,6 +20,14 @@ function convertTemperature() {
         updateThermometer(0); // Reset thermometer if input is invalid
         return;
     }
+// -------------------------------------------------------------------------------------
+    if (isNaN(inputValue)) {
+        document.getElementById('result').textContent = "Please enter a valid number.";
+        document.getElementById('answer').value = "";
+        updateThermometer(0, 'celsius'); // Reset thermometer if input is invalid
+        return;
+    }
+// ---------------------------------------------------------------------------------------
 
     // Perform conversion based on selected units
     if (fromUnit === toUnit) {
@@ -81,6 +89,13 @@ function updateThermometer(value, unit) {
 
     mercury.style.height = `${mercuryHeight}%`;
 
+
+    // Get the temperature message based on the Fahrenheit value
+    const tempFahrenheit = unit === "celsius" ? (celsiusValue * 9 / 5 + 32) :
+                           unit === "kelvin" ? ((celsiusValue * 9 / 5 + 32)) :
+                           parseFloat(value);
+
+
     // Get the background color and apply it
     function getTemperatureMessage(tempFahrenheit) {
         if (tempFahrenheit > 200) {
@@ -93,6 +108,8 @@ function updateThermometer(value, unit) {
             return "Nice and pleasant weather.";
         } else if (tempFahrenheit > 40) {
             return "A bit chilly, you might want a jacket.";
+        } else if (tempFahrenheit === 32) {
+            return "Convert your temperature above!";
         } else if (tempFahrenheit > 20) {
             return "It's cold, stay bundled up!";
         } else if (tempFahrenheit > 0) {

@@ -50,7 +50,7 @@ main {
 
 section {
     grid-area: section;
-    height: 500px;
+    height: 550px;
     background: #fff;
     border: 2px solid #ff6347;
     border-radius: 12px;
@@ -91,12 +91,47 @@ input {
     font-size: 1rem;
 }
 
-.button {
+/* Adjustments for button group layout */
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-group2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    flex: 1 1 auto;
+    margin: 10px;
+    max-width: 250px;
+}
+
+/* Ensure saved conversions wrapper is centered */
+.saved-conversions-wrapper {
     text-align: center;
+    margin-top: 15px;
+}
+
+.clear-button {
+    display: center;
+    margin: 10px auto;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px ;
     border: none;
     border-radius: 8px;
     background-color: #ff6347;
@@ -112,6 +147,9 @@ button:hover {
 }
 
 .result {
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-top: 20px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -125,7 +163,7 @@ aside {
 }
 
 aside img {
-    1 max-width: 100%;
+    max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -137,6 +175,16 @@ article {
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     height: 200%;
+    text-align: center;
+}
+
+#changeText {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff6347; /* Use the color scheme you already have */
+    padding: 10px;
+    margin-top: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 footer {
@@ -279,7 +327,12 @@ label {
 /* NOTE : ANYTHING UNDER 391px THE MERCURY MOVES OUT OF THE THERMOMETER ?  - HH*/
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 767px) {
+
+    #mercuryLevel {
+        position: absolute;
+        bottom: 100px;
+    }
     #thermometerWrapper {
         position: relative;
         top: 260px;
@@ -312,10 +365,56 @@ label {
         font-size: 1rem;
     }
 
+    .saved-conversions-wrapper {
+        text-align: left;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .clear-button {
+        max-width: 50%;
+        display: left;
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        margin: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+    .button-group2 {
+        display: flex;
+        max-width:50%;
+        justify-content: left;
+        flex-wrap: wrap;
+        margin-left: 20px;
+    }
+
+    .result {
+        max-width:75%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:left;
+        padding-left: 10px;
+        align-items:left;
+    }
+    
+    button {
+        padding: 5px ;
+        border: none;
+        border-radius: 8px;
+        background-color: #ff6347;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
     section {
         grid-area: section;
-        height: 500px;
-        width: 325px;
+        height: 550px;
+        width: auto;
         background: #fff;
         border: 2px solid #ff6347;
         border-radius: 12px;
